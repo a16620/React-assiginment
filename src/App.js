@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import './ProfileCard'
+import './PostList'
+import styled from "styled-components";
+import ProfileCard from './ProfileCard';
+import PostList from './PostList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlogContainer>
+        <ProfileCard/>
+        <PostList/>
+      </BlogContainer>
     </div>
   );
 }
+
+const BlogContainer = styled.div`
+  display: flex;
+`;
 
 export default App;
